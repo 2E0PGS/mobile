@@ -52,7 +52,7 @@ This project is licensed under the AGPLv3 free software license. See license for
 ##Contributing
 
 You will need to a few tools in order to contribute to this project:
-#### Java
+### Java
 Ubuntu:
 ```
 sudo add-apt-repository ppa:webupd8team/java
@@ -60,7 +60,7 @@ sudo apt-get update
 sudo apt-get install oracle-java8-installer
 ```
 
-#### Android SDK / Studio
+### Android SDK / Studio
 Download and run the installer
 https://developer.android.com/studio/index.html#downloads
 For Ubuntu you will need to add below lines to bashrc after running the bash installer for Android Studio.
@@ -71,7 +71,7 @@ export ANDROID_HOME=~/Android/Sdk
 export PATH=${PATH}:$ANDROID_HOME/tools:$ANDROID_HOME/platform-tools
 ```
 
-#### NodeJS and NPM
+### NodeJS and NPM
 
 Ubuntu:
 ```
@@ -88,17 +88,17 @@ Don't have brew?
 ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 ```
 
-#### Cordova
+### Cordova
 ```
 sudo npm install -g cordova
 ```
 
-#### Grunt
+### Grunt
 ```
 sudo npm -g install grunt-cli
 ```
 
-#### Run-once setup
+### Run-once setup
 
 ```
 npm install
@@ -106,7 +106,14 @@ npm install
 
 ### Compiling / Building
 
-Run `cordova build`
+```
+cordova build
+```
+
+You will need to configure Android Studio to run the app. Here are the commands you will need:
+`android sdk` to download emulator images. `android avd` to setup a emulator device with that image.
+`cordova requirements` check cordova has satified requirements.
+`cordova platform add android` to add platforms. `cordova run` to run the built apk on the emulator via adb.
 
 ### Environment configurations
 
